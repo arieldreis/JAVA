@@ -5,4 +5,4 @@ public class ex001 {
             System.out.println(x);
         }
     }
-}// Meus exercícos de Jva
+}// Meus exercícos de Java

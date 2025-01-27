@@ -8,4 +8,4 @@ public class ex002 {
         System.out.println( verde + "HORA DO SISTEMA!" + escape);
         System.out.println(data);
     }
-}// Meus exercícos de Jva
+}// Meus exercícos de Java

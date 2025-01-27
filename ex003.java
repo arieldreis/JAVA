@@ -6,4 +6,4 @@ public class ex003 {
         Dimension tamanho_tela = tamanho.getScreenSize();
         System.out.println("Sua tela tem a resolução em " + tamanho_tela.width + " x " + tamanho_tela.height);
     }
-}// Meus exercícos de Jva
+}// Meus exercícos de Java
