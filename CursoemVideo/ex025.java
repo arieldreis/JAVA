@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-public class ex026b {
+public class ex025 {
     public static void main(String[] args) {
         JFrame janela = new JFrame("Tipos de Triângulo");
         janela.setSize(600, 600);
