@@ -29,7 +29,7 @@ public class ex026b {
 
         JSlider slider = new JSlider(0, 20);
         slider.setValue(0); // Valor inicial do nosso input:range
-        slider.setMajorTickSpacing(5); // Intervalo entre um número para outro
+        slider.setMajorTickSpacing(2); // Intervalo entre um número para outro
         slider.setPaintTicks(true); // mostrar os tracinhos
         slider.setPaintLabels(true); // mostrar os valores
         slider.setBackground(Color.BLACK);
@@ -51,7 +51,7 @@ public class ex026b {
 
         JSlider slider1 = new JSlider(0, 20);
         slider1.setValue(0); // Valor inicial do nosso input:range
-        slider1.setMajorTickSpacing(5); // Intervalo entre um número para outro
+        slider1.setMajorTickSpacing(2); // Intervalo entre um número para outro
         slider1.setPaintTicks(true); // mostrar os tracinhos
         slider1.setPaintLabels(true); // mostrar os valores
         slider1.setBackground(Color.BLACK);
@@ -73,7 +73,7 @@ public class ex026b {
 
         JSlider slider2 = new JSlider(0, 20);
         slider2.setValue(0);
-        slider2.setMajorTickSpacing(5); // Intervalo entre um número para outro
+        slider2.setMajorTickSpacing(2); // Intervalo entre um número para outro
         slider2.setPaintTicks(true);
         slider2.setPaintLabels(true);
         slider2.setBackground(Color.BLACK);
@@ -95,11 +95,23 @@ public class ex026b {
         linha5.setLayout(new FlowLayout(FlowLayout.CENTER));
         linha5.setOpaque(false);
 
-        JLabel lbl5 = new JLabel("Forma um Triângulo");
+        JLabel lbl5 = new JLabel("<html>Forma um Triângulo</html>");
         lbl5.setForeground(Color.BLUE);
         lbl5.setBackground(Color.BLACK);
         lbl5.setFont(new Font("Arial", Font.BOLD, 25));
+        lbl5.setAlignmentX(Component.CENTER_ALIGNMENT);
         linha5.add(lbl5);
+        // Classificação do Triângulo
+        JPanel linha6 = new JPanel();
+        linha6.setLayout(new FlowLayout(FlowLayout.CENTER));
+        linha6.setOpaque(false);
+
+        JLabel lbl6 = new JLabel("");
+        lbl6.setBackground(Color.BLACK);
+        lbl6.setForeground(Color.WHITE);
+        lbl6.setFont(new Font("Arial", Font.BOLD, 20));
+        lbl6.setAlignmentX(Component.CENTER_ALIGNMENT);
+        linha6.add(lbl6);
 
         // Adiciona a variavel linha á interface gráfica
         linha1.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -111,6 +123,26 @@ public class ex026b {
         janela.add(botao);
         linha5.setAlignmentX(Component.CENTER_ALIGNMENT);
         janela.add(linha5);
+        linha6.setAlignmentX(Component.CENTER_ALIGNMENT);
+        janela.add(linha6);
+        // Craiando a lógica do triângulo
+        botao.addActionListener(e -> {
+            int segA = (int)(slider.getValue());
+            int segB = (int)(slider1.getValue());
+            int segC = (int)(slider2.getValue());
+            String mensagem;
+            // QUAL É O TIPO DE TRIÂNGULO
+            if(segA == segB && segA == segC){
+                mensagem = String.format("<html>Triângulo Equilátero</html>");
+                lbl6.setText(mensagem);
+            }else if(segA == segB && segA != segC || segB == segC && segB != segA || segC == segA && segC != segB){
+                mensagem = String.format("<html>Triângulo Isósceles</html>");
+                lbl6.setText(mensagem);
+            }else{
+                mensagem = String.format("<html>Triângulo Escaleno</html>");
+                lbl6.setText(mensagem);
+            }
+        });
         janela.setVisible(true);
     }
 }
