@@ -39,12 +39,17 @@ public class ex028 {
             public void stateChanged(ChangeEvent e) {
                 int expoente = (int)(expoWindow.getValue());
                 int mult = 1;
+                StringBuilder conta = new StringBuilder();
                 String resposta;
                 for(int cont = 1; cont <= expoente; cont+=1){
                     mult*=cont;
+                    conta.append(cont);
+                    if(cont < expoente){
+                        conta.append(" x ");
+                    }
                 }
-                resposta = String.format("%d", mult);
-                lbl2.setText(resposta);
+                conta.append(" = ").append(mult);
+                lbl2.setText(conta.toString());
             }
         });
         janela.setVisible(true);
