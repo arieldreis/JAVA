@@ -1,2 +1,2 @@
-# JAVA COM GUSTAVO GUANABARA
-Aqui estão meus exercícios de Java básico desenvolvidos pelo canal do CursoemVídeo.
+# Exercícios práticos de Java
+Aqui estão meus exercícios de Java deste de criação de função framework, programação orienetada a objeto e jogos.
