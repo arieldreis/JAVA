@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-public class ex002 {
+public class ex032 {
     public static void main(String[] args) {
         JFrame janela = new JFrame("Progressão Aritimética");
         janela.setLayout(new BoxLayout(janela.getContentPane(), BoxLayout.Y_AXIS));

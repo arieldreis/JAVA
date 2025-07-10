@@ -1,6 +1,6 @@
 // Progressão aritimética no terminal
 import java.util.Scanner;
-public class teste {
+public class ex031 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Início: ");
