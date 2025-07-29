@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ex005 {
+public class ex0005 {
     public static void main(String[] args) {
         double x = Math.sqrt(64);
         System.out.println(x);

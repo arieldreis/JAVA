@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Locale;
-public class ex003 {
+public class ex0003 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
