@@ -10,7 +10,8 @@ desde a **criação de funções e frameworks** até **programação orientada a
 - ✅ Estruturas de decisão e repetição  
 - ✅ Programação Orientada a Objetos (POO)  
 - ✅ Criação de pequenos frameworks em **Spring Boot**
-- ✅ Mini jogos em Java  
+- ✅ Mini jogos em Java
+- ✅ Criação de Interface Gráfica
 
 ---
 
@@ -30,7 +31,7 @@ git clone https://github.com/arieldreis/JAVA.git
 cd JAVA
 
 # Compile o arquivo
-javac NomeDoArquivo.java
+javac ./CursoemVideo/ex001.java
 
 # Rode o programa
-java NomeDoArquivo
+java ./CursoemVideo/ex001.java
