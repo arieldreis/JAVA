@@ -16,4 +16,7 @@ public class product {
     public void RemoveProduct(int quantity){
         this.Quantity -= quantity;
     }
+    public String toString(){
+        return name + ", R$" + price + ", " + Quantity + " units, Total: R$ " + TotalValueStock();
+    }
 }
