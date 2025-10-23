@@ -12,7 +12,6 @@ public class currency {
         System.out.println("How many dollars will be bought? ");
         moeda.boughtDollar = sc.nextDouble();
 
-
         System.out.printf("Amount to be paid in reais = US$%.2f", moeda.conversao());
     }
 }
