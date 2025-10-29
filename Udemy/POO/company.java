@@ -1,4 +1,6 @@
-import entities.employee;
+package POO;
+
+import POO.entities.employee;
 import java.util.Scanner;
 import java.util.Locale;
 public class company {

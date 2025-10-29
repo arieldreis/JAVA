@@ -1,4 +1,6 @@
-import entities.CurrencyConverter;
+package POO;
+
+import POO.entities.CurrencyConverter;
 import java.util.Scanner;
 import java.util.Locale;
 public class currency {

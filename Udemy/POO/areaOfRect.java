@@ -1,4 +1,6 @@
-import entities.rect;
+package POO;
+
+import POO.entities.rect;
 import java.util.Scanner;
 import java.util.Locale;
 public class areaOfRect {

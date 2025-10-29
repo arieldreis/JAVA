@@ -1,3 +1,5 @@
+package POO;
+
 import java.util.Scanner;
 import java.util.Locale;
 

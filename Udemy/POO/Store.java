@@ -1,6 +1,8 @@
+package POO;
+
 import java.util.Scanner;
 import java.util.Locale;
-import entities.product;
+import POO.entities.product;
 public class Store {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);

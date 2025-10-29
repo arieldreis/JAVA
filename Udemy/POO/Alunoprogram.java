@@ -1,4 +1,6 @@
-import entities.aluno;
+package POO;
+
+import POO.entities.aluno;
 import java.util.Locale;
 import java.util.Scanner;
 public class Alunoprogram {

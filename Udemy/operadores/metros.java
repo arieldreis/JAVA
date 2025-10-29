@@ -1,6 +1,8 @@
-import java.util.Scanner;
+package operadores;
+
 import java.util.Locale;
-public class ex0002 {
+import java.util.Scanner;
+public class metros {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -19,4 +21,3 @@ public class ex0002 {
         sc.close();
     }
 }
-
