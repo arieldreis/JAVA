@@ -1,4 +1,4 @@
-package entities;
+package POO.entities;
 public class aluno {
     public String nome;
     public double notaone;

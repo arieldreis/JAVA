@@ -1,4 +1,4 @@
-package entities;
+package POO.entities;
 
 public class product {
     public String name;

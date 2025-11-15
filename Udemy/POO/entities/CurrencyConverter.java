@@ -1,4 +1,4 @@
-package entities;
+package POO.entities;
 
 public class CurrencyConverter {
     public double dollarPrice;

@@ -1,4 +1,4 @@
-package entities;
+package POO.entities;
 
 public class rect {
     public double width;
