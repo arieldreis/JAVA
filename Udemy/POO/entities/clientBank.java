@@ -16,4 +16,20 @@ public class clientBank {
     public void setNumberAccount(int numberAccount){
         this.numberAccount = numberAccount;
     }
+    public String getNameClient(){
+        return nameClient;
+    }
+    public void setNameClient(String nameClient){
+        this.nameClient = nameClient;
+    }
+    public double getDeposit(){
+        return deposit;
+    }
+    public void setDeposit(double deposit){
+        this.deposit = deposit;
+    }
+    public void showDatas(){
+        System.out.printf("Account Data:\n" +
+                "Account %d, Holder: %s, Balance: $.2f", getNumberAccount(), getNameClient(), getDeposit());
+    }
 }

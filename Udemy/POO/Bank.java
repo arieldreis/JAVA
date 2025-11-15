@@ -9,13 +9,29 @@ public class Bank {
         Scanner sc = new Scanner(System.in);
         clientBank banco = new clientBank();
 
+        int numberaccount;
+        String name;
+        double deposit = 0;
+        
         System.out.println("Enter account number: ");
-        int numberaccount = sc.nextInt();
+        numberaccount = sc.nextInt();
         System.out.println("Enter account holder: ");
-        String name = sc.nextLine();
+        name = sc.next().strip();
         System.out.println("Is there a initial deposit (y/n)? ");
-        String msg = sc.nextLine();
+        String msg = sc.nextLine().toLowerCase();
+        if(msg == "y"){
+            System.out.println("Enter a initial deposit value: ");
+            deposit = sc.nextDouble();
+        }
+        if(msg == "n"){
+            System.out.println("Ok");
+        }
 
-        System.out.println();
+        /* Envia os dados das variavéis para a classe clientBank*/
+        banco.setNumberAccount(numberaccount);
+        banco.setNameClient(name);
+        banco.setDeposit(deposit);
+
+        banco.showDatas();
     }
 }
