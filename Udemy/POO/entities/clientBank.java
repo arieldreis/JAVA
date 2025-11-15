@@ -30,6 +30,12 @@ public class clientBank {
     }
     public void showDatas(){
         System.out.printf("Account Data:\n" +
-                "Account %d, Holder: %s, Balance: $.2f", getNumberAccount(), getNameClient(), getDeposit());
+                "Account %d, Holder: %s, Balance: %.2f", getNumberAccount(), getNameClient(), getDeposit());
+    }
+    public void addMoney(double deposit){
+        this.deposit += deposit;
+    }
+    public void removeMoney(double deposit){
+        this.deposit -= deposit;
     }
 }
