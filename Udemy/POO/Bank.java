@@ -26,17 +26,31 @@ public class Bank {
         if(msg.equals("y")){
             System.out.println("Enter a initial deposit value: ");
             deposit = sc.nextDouble();
+            banco.addMoney(deposit);
             banco.showDatas();
+
+            System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("Enter a deposit value:");
+            deposit = sc.nextDouble();
+            banco.addMoney(deposit);
         }
         if(msg.equals("n")){
             banco.showDatas();
+            System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("Enter a deposit value:");
+            deposit = sc.nextDouble();
+            banco.addMoney(deposit);
         }
         /* Métodos para depositar e sacar o dinheiro */
 
-        System.out.println("Enter a deposit value:");
+
+        System.out.println("Update account data: ");
+        banco.showDatas();
+        System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("Enter a withdraw value: ");
         deposit = sc.nextDouble();
-        banco.addMoney(deposit);
-        System.out.println("Update account data: " + banco.showDatas());
+        banco.removeMoney(deposit);
+        banco.showDatas();
 
         /* Envia os dados das variavéis para a classe clientBank*/
         banco.setNumberAccount(IntegernumberAccount);
