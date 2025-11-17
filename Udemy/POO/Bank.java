@@ -26,35 +26,37 @@ public class Bank {
         if(msg.equals("y")){
             System.out.println("Enter a initial deposit value: ");
             deposit = sc.nextDouble();
-            banco.addMoney(deposit);
-            banco.showDatas();
+            banco.deposit(deposit);
+            System.out.println("Updated account data: ");
+            banco.show();
 
             System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("Enter a deposit value:");
             deposit = sc.nextDouble();
-            banco.addMoney(deposit);
+            banco.deposit(deposit);
         }
         if(msg.equals("n")){
-            banco.showDatas();
+            banco.show();
             System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("Enter a deposit value:");
             deposit = sc.nextDouble();
-            banco.addMoney(deposit);
+            banco.deposit(deposit);
         }
         /* Métodos para depositar e sacar o dinheiro */
 
 
         System.out.println("Update account data: ");
-        banco.showDatas();
+        banco.show();
         System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("Enter a withdraw value: ");
         deposit = sc.nextDouble();
-        banco.removeMoney(deposit);
-        banco.showDatas();
+        banco.withdraw(deposit);
+        System.out.println("Updated account data: ");
+        banco.show();
 
         /* Envia os dados das variavéis para a classe clientBank*/
-        banco.setNumberAccount(IntegernumberAccount);
-        banco.setNameClient(name);
+        banco.getNumberAccount(IntegernumberAccount);
+        banco.getNameClient(name);
         banco.setDeposit(deposit);
     }
 }

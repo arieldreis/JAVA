@@ -4,20 +4,18 @@ public class clientBank {
     private int numberAccount;
     private String nameClient;
     private double deposit;
+
     public void dataClient(int numberAccount, String nameClient, double deposit){
         this.numberAccount = numberAccount;
         this.nameClient = nameClient;
-        this.deposit = deposit;
+        deposit(deposit);
     }
 
-    public int getNumberAccount(){
+    public int getNumberAccount(int integernumberAccount){
         return numberAccount;
     }
-    public void setNumberAccount(int numberAccount){
-        this.numberAccount = numberAccount;
-    }
-    public String getNameClient(){
-        return nameClient;
+    public String getNameClient(String name){
+        return name;
     }
     public void setNameClient(String nameClient){
         this.nameClient = nameClient;
@@ -28,13 +26,15 @@ public class clientBank {
     public void setDeposit(double deposit){
         this.deposit = deposit;
     }
-    public void addMoney(double deposit){
+    public void deposit(double deposit){
         this.deposit += deposit;
     }
-    public void removeMoney(double deposit){
+    public void withdraw(double deposit){
         this.deposit -= (deposit + 5);
     }
-    public void showDatas(){
-        System.out.printf("Account %d, Holder: %s, Balance: %.2f", getNumberAccount(), getNameClient(), getDeposit());
+    public void show(){
+        // return "Acoount: " + getNumberAccount() + ", " + "Holder: " + getNameClient() + ", " + "Balance: " + getDeposit();
+        double deposit1 = getDeposit();
+        System.out.printf("Account %d, Holder: %s, Balance: %.2f", numberAccount, nameClient, deposit1);
     }
 }
