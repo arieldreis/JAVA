@@ -9,13 +9,13 @@ public class Bank {
         Scanner sc = new Scanner(System.in);
         clientBank banco = new clientBank();
 
-        String numberaccountString;
+        int numeroConta;
         String name;
         double deposit = 0;
 
         System.out.println("Enter account number: ");
-        numberaccountString = sc.nextLine();
-        int IntegernumberAccount = Integer.parseInt(numberaccountString); // Coverte a string para int
+        numeroConta = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("Enter account holder: ");
         name = sc.nextLine().strip();
@@ -55,8 +55,10 @@ public class Bank {
         banco.show();
 
         /* Envia os dados das variavéis para a classe clientBank*/
-        banco.getNumberAccount(IntegernumberAccount);
+        banco.getNumberAccount(numeroConta);
         banco.getNameClient(name);
         banco.setDeposit(deposit);
+
+        sc.close();
     }
 }

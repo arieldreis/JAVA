@@ -1,3 +1,5 @@
+package manipulacao_string;
+
 public class ex0004 {
     public static void main(String[] args) {
         String txt = "I love too much Java!";

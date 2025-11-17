@@ -1,3 +1,4 @@
+package condicao;
 import java.util.Scanner;
 public class ex0005 {
     public static void main(String[] args) {
