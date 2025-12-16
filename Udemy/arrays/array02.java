@@ -22,7 +22,7 @@ public class array02 {
             sum+=price[index];
         }
         double avg = sum / n;
-        System.out.println(avg);
+        System.out.printf("Average price = %.2f", avg);
         sc.close();
     }
 }
