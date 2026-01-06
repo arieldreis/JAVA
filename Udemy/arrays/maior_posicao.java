@@ -1,8 +1,7 @@
 package arrays;
-import javax.swing.text.html.Option;
 import java.util.*;
 
-public class array06 {
+public class maior_posicao {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

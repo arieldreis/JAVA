@@ -1,7 +1,7 @@
 package arrays;
 import java.util.Locale;
 import java.util.Scanner;
-public class array10 {
+public class dados_pessoas {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

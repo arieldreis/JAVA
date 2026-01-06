@@ -1,8 +1,8 @@
 package arrays;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.Arrays;
-public class array13 {
+
+public class aprovados {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

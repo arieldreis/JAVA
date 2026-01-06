@@ -1,9 +1,8 @@
 package arrays;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class array07 {
+public class soma_vetores {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

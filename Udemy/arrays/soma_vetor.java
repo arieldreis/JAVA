@@ -1,8 +1,7 @@
 package arrays;
-import java.lang.reflect.Array;
 import java.util.*;
 
-public class array04 {
+public class soma_vetor {
     public static void main(String[] args){
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

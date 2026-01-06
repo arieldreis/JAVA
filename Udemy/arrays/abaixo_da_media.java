@@ -3,7 +3,7 @@ package arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class array08 {
+public class abaixo_da_media {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
