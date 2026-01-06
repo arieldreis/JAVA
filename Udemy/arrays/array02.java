@@ -1,7 +1,6 @@
 package arrays;
 import java.util.Locale;
 import java.util.Scanner;
-import arrays.entities.arrayProduct;
 
 public class array02 {
     public static void main(String[] args) {
