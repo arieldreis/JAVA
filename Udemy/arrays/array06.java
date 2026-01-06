@@ -23,5 +23,6 @@ public class array06 {
         }
         System.out.println("Maior valor = " + maior);
         System.out.println("Posição = " + posmaior);
+        sc.close();
     }
 }

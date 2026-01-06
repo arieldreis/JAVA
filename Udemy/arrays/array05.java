@@ -25,5 +25,6 @@ public class array05 {
             }
         }
         System.out.println("\nQuantidade de Números Pares: " + QuantPar);
+        sc.close();
     }
 }

@@ -27,5 +27,6 @@ public class array08 {
                 System.out.println(vetor[index]);
             }
         }
+        sc.close();
     }
 }

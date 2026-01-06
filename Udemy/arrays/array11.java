@@ -53,8 +53,6 @@ public class array11 {
             }
         }
 
-
-
         /*Como printar todos os elementos de uma array*/
         System.out.println(Arrays.toString(nome));
         System.out.println(Arrays.toString(idade));

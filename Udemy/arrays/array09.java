@@ -28,5 +28,6 @@ public class array09 {
             double mediapares = (double) soma / npares;
             System.out.printf("MEDIA DOS PARES = %f", mediapares);
         }
+        sc.close();
     }
 }

@@ -20,5 +20,6 @@ public class array04 {
         System.out.printf("Soma = %.2f\n", Arrays.stream(numeros).sum());
         OptionalDouble media = Arrays.stream(numeros).average();
         System.out.println("Media = " + media);
+        sc.close();
     }
 }

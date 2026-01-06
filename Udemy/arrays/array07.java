@@ -27,5 +27,6 @@ public class array07 {
         for(int index = 0; index < quant; index++){
             System.out.printf("%d\n", vetor3[index]);
         }
+        sc.close();
     }
 }
