@@ -1,6 +1,6 @@
-package condicao;
+package estrutura_condicao;
 import java.util.Scanner;
-public class ex0005 {
+public class condicao01 {
     public static void main(String[] args) {
         double x = Math.sqrt(64);
         System.out.println(x);
