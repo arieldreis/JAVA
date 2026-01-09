@@ -1,4 +1,4 @@
-package arrays;
+package arrays.exercises;
 import java.util.*;
 
 public class soma_vetor {

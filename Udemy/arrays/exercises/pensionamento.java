@@ -1,5 +1,4 @@
-package arrays;
-import java.util.Arrays;
+package arrays.exercises;
 import java.util.Locale;
 import java.util.Scanner;
 import arrays.entities.rent;

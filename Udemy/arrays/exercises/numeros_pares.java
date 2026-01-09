@@ -1,4 +1,4 @@
-package arrays;
+package arrays.exercises;
 import java.util.Locale;
 import java.util.Scanner;
 
