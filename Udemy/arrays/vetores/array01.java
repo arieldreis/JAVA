@@ -1,4 +1,4 @@
-package arrays;
+package arrays.vetores;
 import java.util.Scanner;
 import java.util.Locale;
 public class array01 {
