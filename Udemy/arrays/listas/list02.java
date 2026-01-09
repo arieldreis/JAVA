@@ -1,13 +1,17 @@
 package arrays.listas;
-import java.util.*;
 
-public class list01 {
+import java.util.ArrayList;
+import java.util.List;
+
+public class list02 {
     public static void main(String[] args) {
         List<String> cars = new ArrayList<>();
         cars.add("Volvo");
         cars.add("Fiat");
         cars.add("Tesla");
 
-        System.out.println(cars);
+        for(String x : cars){
+            System.out.println("Meus carros: " + x);
+        }
     }
 }

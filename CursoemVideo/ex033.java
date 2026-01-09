@@ -1,4 +1,4 @@
-public class ex003 {
+public class ex033 {
     public static void main(String[] args) {
         String[] mes = {"Jan", "Fev", "Mar", "Abr", "Mai",
                 "Jun", "Ago", "Set", "Out", "Nov", "Dez"};
