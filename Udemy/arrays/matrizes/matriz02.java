@@ -1,5 +1,4 @@
 package arrays.matrizes;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 public class matriz02 {
@@ -22,6 +21,18 @@ public class matriz02 {
             for (int j = 0; j < matrizes[index].length; j++) {
                 if(matrizes[index][j] == Elementomatrix){
                     System.out.println("Position: " + index + ", " + j);
+                    if(j > 0){
+                        System.out.println("Left: " + matrizes[index][j - 1]);
+                    }
+                    if(index > 0){
+                        System.out.println("Up: " + matrizes[index - 1][j]);
+                    }
+                    if(j < matrizes[index].length - 1){
+                        System.out.println("Right: " + matrizes[index][j + 1]);
+                    }
+                    if(index < matrizes.length - 1){
+                        System.out.println("Down: " + matrizes[index + 1][j]);
+                    }
                 }
             }
         }
@@ -29,8 +40,3 @@ public class matriz02 {
         sc.close();
     }
 }
-/*;
-            System.out.println("Right: ");
-            System.out.println("Left: ");
-            System.out.println("Up: ");
-            System.out.println("Down: ");*/
