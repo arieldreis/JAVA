@@ -18,19 +18,18 @@ public class matriz02 {
         }
         System.out.println("Qual número você deseja ás informações na matriz: ");
         int Elementomatrix = sc.nextInt();
-        int Npares = 0;
         for(int index = 0; index < matrizes.length; index++){
             for (int j = 0; j < matrizes[index].length; j++) {
-                if (matrizes[index][j] % 2 == 0){
-                    Npares = matrizes[index][j];
+                if(matrizes[index][j] == Elementomatrix){
+                    System.out.println("Position: " + index + ", " + j);
                 }
             }
         }
 
-        System.out.println(Npares);
+        sc.close();
     }
 }
-/*System.out.println("Position: ");
+/*;
             System.out.println("Right: ");
             System.out.println("Left: ");
             System.out.println("Up: ");
