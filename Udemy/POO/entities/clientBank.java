@@ -24,6 +24,7 @@ public class clientBank {
         return deposit;
     }
     public void setDeposit(double deposit){
+
         this.deposit = deposit;
     }
     public void deposit(double deposit){
@@ -33,8 +34,13 @@ public class clientBank {
         this.deposit -= (deposit + 5);
     }
     public void show(){
-        // return "Acoount: " + getNumberAccount() + ", " + "Holder: " + getNameClient() + ", " + "Balance: " + getDeposit();
         double deposit1 = getDeposit();
         System.out.printf("Account %d, Holder: %s, Balance: %.2f", numberAccount, nameClient, deposit1);
+    }
+
+    public String toString() {
+        return "Account " + numberAccount
+                + ", Holder: " + nameClient
+                + ", Balance: " + deposit;
     }
 }
