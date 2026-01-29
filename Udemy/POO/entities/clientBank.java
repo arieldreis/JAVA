@@ -33,6 +33,9 @@ public class clientBank {
         this.deposit -= (deposit + 5);
     }
 
+    // @Override: É um "selo de garantia".
+    // Ele avisa ao Java: "Estou reescrevendo um método que já existe na classe pai".
+    // Se você digitar o nome do método errado, o @Override faz o Java te avisar com um erro.
     @Override
     public String toString() {
         return "Account " + numberAccount
