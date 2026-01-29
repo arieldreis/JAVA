@@ -8,7 +8,6 @@ public class Bank {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        clientBank bancoObj = new clientBank();
 
         double deposit = 0;
 
@@ -19,7 +18,7 @@ public class Bank {
         System.out.println("Enter account holder: ");
         String name = sc.nextLine().strip();
 
-        // clientBank bancoObj1 = new clientBank(numeroConta, name);
+        clientBank bancoObj = new clientBank(numeroConta, name, deposit);
 
         System.out.println("Is there a initial deposit (y/n)? ");
         String msg = sc.nextLine().toLowerCase();
@@ -29,7 +28,7 @@ public class Bank {
             deposit = sc.nextDouble();
             bancoObj.deposit(deposit);
             System.out.println("Updated account data: ");
-            bancoObj.show();
+            System.out.println(bancoObj.toString());
 
             System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("Enter a deposit value:");
@@ -37,7 +36,7 @@ public class Bank {
             bancoObj.deposit(deposit);
         }
         if(msg.equals("n")){
-            bancoObj.show();
+            System.out.println(bancoObj.toString());
             System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("Enter a deposit value:");
             deposit = sc.nextDouble();
@@ -46,13 +45,13 @@ public class Bank {
         /* Métodos para depositar e sacar o dinheiro */
 
         System.out.println("Update account data: ");
-        bancoObj.show();
+        System.out.println(bancoObj.toString());
         System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("Enter a withdraw value: ");
         deposit = sc.nextDouble();
         bancoObj.withdraw(deposit);
         System.out.println("Updated account data: ");
-        bancoObj.toString();
+        System.out.println(bancoObj.toString());
 
         /* Envia os dados das variavéis para a classe clientBank*/
         bancoObj.setDeposit(deposit);
