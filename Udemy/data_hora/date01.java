@@ -2,6 +2,7 @@ package data_hora;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class date01 {
@@ -25,6 +26,12 @@ public class date01 {
         LocalDate d10 = LocalDate.of(2022,7, 20);
         LocalDateTime d11 = LocalDateTime.of(2022,7, 20, 1, 20);
 
+        LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault()); // Essa linha imprimi de acordo com a formatação do meu computador.
+
+        for(String s : ZoneId.getAvailableZoneIds()){
+            System.out.println(s); // Fuso horário de cada país
+        }
+        System.out.println("--------------------------------");
         System.out.println("d01 = " + d01.toString());
         System.out.println("d02 = " + d02.toString());
         System.out.println("d03 = " + d03.toString());
