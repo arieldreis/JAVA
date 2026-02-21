@@ -17,7 +17,7 @@ public class date01 {
 
         LocalDate  d04 = LocalDate.parse("2026-01-31");
         LocalDateTime d05 = LocalDateTime.parse("2026-01-31T00:20:26");
-        Instant d06 = Instant.parse("2026-01-31T01:30:26Z");
+        Instant d06 = Instant.parse("2026-02-21T01:30:26Z");
         Instant d07 = Instant.parse("2026-01-31T01:30:26-03:00"); // Uma conta básica 01:30:26 - 03:00:00, que mostrará o horário de Londres.
 
         LocalDate d08 = LocalDate.parse("20/07/2022", fmt1);
@@ -27,6 +27,9 @@ public class date01 {
         LocalDateTime d11 = LocalDateTime.of(2022,7, 20, 1, 20);
 
         LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault()); // Essa linha imprimi de acordo com a formatação do meu computador.
+        LocalDate r2 = LocalDate.ofInstant(d06, ZoneId.of("Portugal"));
+        LocalDateTime r3 = LocalDateTime.ofInstant(d06, ZoneId.systemDefault());
+        LocalDateTime r4 = LocalDateTime.ofInstant(d06, ZoneId.of("Portugal"));
 
         for(String s : ZoneId.getAvailableZoneIds()){
             System.out.println(s); // Fuso horário de cada país
@@ -43,5 +46,18 @@ public class date01 {
         System.out.println("d09 = " + d09.toString());
         System.out.println("d10 = " + d10.toString());
         System.out.println("d11 = " + d11.toString());
+        System.out.println("-----------------------------------");
+        System.out.println("r1 = " + r1);
+        System.out.println("r2 = " + r2);
+        System.out.println("r3 = " + r3);
+        System.out.println("r4 = " + r4);
+        System.out.println("-------------------------------------");
+        System.out.println("d04 dia = " + d04.getMonth()); // Mostra o mês no qual a variável é configurada.
+        System.out.println("d04 mês = " + d04.getMonthValue()); // Mostra o mês do ano porém em formato de número
+        System.out.println("d04 ano = " + d04.getYear());
+        System.out.println("d05 hora = " + d05.getHour()); // O valor deu 0 pq é meia-noite
+        System.out.println("d05 minutos = " + d05.getMinute());
     }
 }
+
+// systemDefault() é configurado para data do computador
