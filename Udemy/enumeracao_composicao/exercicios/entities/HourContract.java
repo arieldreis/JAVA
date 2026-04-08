@@ -1,27 +1,28 @@
 package enumeracao_composicao.exercicios.entities;
+import java.time.LocalDate;
 import java.util.Date;
 public class HourContract {
-    private Date date;
+    private LocalDate date;
     private Double valuePerHour;
     private Integer hours;
 
-    public HourContract(String date, Double valuePerHour, Integer hours) {
-        this.date = new Date(date);
+    public HourContract(LocalDate date, Double valuePerHour, Integer hours) {
+        this.date = date;
         this.valuePerHour = valuePerHour;
         this.hours = hours;
     }
 
-    public void HourContract(Date date, Double valuePerHour, Integer hours){
+    public void HourContract(LocalDate date, Double valuePerHour, Integer hours){
         this.date = date;
         this.valuePerHour = valuePerHour;
         this.hours = hours;
     }
 
     // Getters and Setters
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
     public Double getValuePerHour() {
@@ -41,5 +42,9 @@ public class HourContract {
     public Double totalValue(){
         double sum = this.valuePerHour * this.hours;
         return sum;
+    }
+
+    public String toString(){
+        return date + ", " + valuePerHour + ", " + hours;
     }
 }

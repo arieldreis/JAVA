@@ -8,6 +8,7 @@ import enumeracao_composicao.exercicios.entities.enums.WorkerLevel;
 
 // Importando data, scanner e language
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Locale;
@@ -21,9 +22,12 @@ public class Worker_Program {
         List<Department> workerDepartments = new ArrayList<>();
         List<HourContract> workerHourContract = new ArrayList<>();
         List<Worker> workers = new ArrayList<>();
+        String dataString = "20/08/2018";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = LocalDate.parse(dataString, dtf);
 
-        Department department = new Department("Engenheiro");
-        HourContract hourContractEmployee = new HourContract("2025-04-08", 50.00, 20);
+        Department department = new Department("Engenharia de Software");
+        HourContract hourContractEmployee = new HourContract(date, 50.00, 20);
         Worker employee = new Worker("Alex", WorkerLevel.MID_LEVEL, 1200.00);
 
         System.out.println("Dados do departamento: " + department);

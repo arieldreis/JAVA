@@ -49,4 +49,8 @@ public class Worker {
         return LocalDate.parse(date, dtf);
     }
 
+    public String toString(){
+        return name + ", " + level + ", " + baseSalary;
+    }
+
 }
