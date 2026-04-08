@@ -1,0 +1,52 @@
+# Spring Boot
+### JetBrains IDE (IntelliJ IDEA) ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+gen/
+
+### Eclipse IDE ###
+.metadata/
+bin/
+tmp/
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### Visual Studio Code ###
+.vscode/
+
+### Build Tools (Maven) ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.nextSnapshot
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Build Tools (Gradle) ###
+build/
+.gradle/
+/out/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Log Files ###
+*.log
+logs/
+
+### OS specific files ###
+.DS_Store
+Thumbs.db
+
+### Application secrets (OPCIONAL - Segurança) ###
+# Nunca suba arquivos com senhas reais
+# application-local.properties
+# .env
