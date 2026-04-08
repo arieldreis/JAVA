@@ -5,6 +5,12 @@ public class HourContract {
     private Double valuePerHour;
     private Integer hours;
 
+    public HourContract(String date, Double valuePerHour, Integer hours) {
+        this.date = new Date(date);
+        this.valuePerHour = valuePerHour;
+        this.hours = hours;
+    }
+
     public void HourContract(Date date, Double valuePerHour, Integer hours){
         this.date = date;
         this.valuePerHour = valuePerHour;
@@ -32,5 +38,8 @@ public class HourContract {
     }
 
     // Method
-    public Double totalValue(){}
+    public Double totalValue(){
+        double sum = this.valuePerHour * this.hours;
+        return sum;
+    }
 }

@@ -1,10 +1,21 @@
 package enumeracao_composicao.exercicios.entities;
 import enumeracao_composicao.exercicios.entities.enums.WorkerLevel;
 import enumeracao_composicao.exercicios.entities.HourContract;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Worker {
     private String name;
     private WorkerLevel level;
     private Double baseSalary;
+
+    // Contrutor
+    public Worker(String name, WorkerLevel level, Double baseSalary) {
+        this.name = name;
+        this.level = level;
+        this.baseSalary = baseSalary;
+    }
 
     // Getters and Setters
     public String getName() {
@@ -27,8 +38,15 @@ public class Worker {
     }
 
     // Method
-    public void addContract(HourContract contract){}
+    public void addContract(HourContract contract){
+
+    }
     public void removeContract(HourContract contract){}
-    private Double income(Integer year, Integer month){}
+    private LocalDate income(Integer year, Integer month){
+        String date = year + "/" + month;
+        // Formato que o programa será executado.
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM");
+        return LocalDate.parse(date, dtf);
+    }
 
 }
