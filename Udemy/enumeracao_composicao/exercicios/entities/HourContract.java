@@ -12,12 +12,6 @@ public class HourContract {
         this.hours = hours;
     }
 
-    public void HourContract(LocalDate date, Double valuePerHour, Integer hours){
-        this.date = date;
-        this.valuePerHour = valuePerHour;
-        this.hours = hours;
-    }
-
     // Getters and Setters
     public LocalDate getDate() {
         return date;
@@ -25,12 +19,12 @@ public class HourContract {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
     public Double getValuePerHour() {
         return valuePerHour;
     }
-    public void setValuePerHour(Double valuePerHour) {
-        this.valuePerHour = valuePerHour;
-    }
+    public void setValuePerHour(Double valuePerHour) {this.valuePerHour = valuePerHour;}
+
     public Integer getHours() {
         return hours;
     }
@@ -40,8 +34,7 @@ public class HourContract {
 
     // Method
     public Double totalValue(){
-        double sum = this.valuePerHour * this.hours;
-        return sum;
+        return this.valuePerHour * this.hours;
     }
 
     public String toString(){

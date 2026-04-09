@@ -19,7 +19,6 @@ public class Worker_Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        List<Department> workerDepartments = new ArrayList<>();
         List<HourContract> workerHourContract = new ArrayList<>();
         List<Worker> workers = new ArrayList<>();
 
@@ -43,12 +42,10 @@ public class Worker_Program {
 
         // Instanciando as classes para objetos e adicionando os objetos nas listas.
         Department department = new Department(departmentName);
-        workerDepartments.add(department);
-
-        Worker employee = new Worker(name, WorkerLevel.valueOf(level), baseSalary);
+        Worker employee = new Worker(name, WorkerLevel.valueOf(level), baseSalary, department);
         workers.add(employee);
 
-        for(int i = 0; i < qtdContracts; i++) {
+        for (int i = 0; i < qtdContracts; i++) {
             System.out.printf("Enter contract #%d data: ", i + 1);
 
             System.out.println("\nDate (DD/MM/YYYY): ");
@@ -59,15 +56,21 @@ public class Worker_Program {
             double valuePerHour = sc.nextDouble();
 
             System.out.println("Duration (hours): ");
-            int  durationHours = sc.nextInt();
+            int durationHours = sc.nextInt();
             sc.nextLine();
 
             HourContract hourContractEmployee = new HourContract(data_convertida, valuePerHour, durationHours);
             workerHourContract.add(hourContractEmployee);
         }
 
-        // System.out.println("Dados do departamento: " + workerDepartments);
-        // System.out.println("Dados de horas de contrato: " + workerHourContract);
-        // System.out.println("Dados do Trabalhador: " + workers);
+        System.out.println("Enter month and year to calculate income (MM/YYYY): ");
+        String Month_and_Year = sc.nextLine();
+
+        int month = Integer.parseInt(Month_and_Year.substring(0, 2));
+        int year = Integer.parseInt(Month_and_Year.substring(3));
+
+        System.out.println("Nome: " + employee.getName());
+        System.out.println("Department: " + department.getName());
+        System.out.println("Ganho para " + Month_and_Year + ": " + String.format("%.2f", employee.income(year, month)));
     }
 }
