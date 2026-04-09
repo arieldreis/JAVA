@@ -22,17 +22,52 @@ public class Worker_Program {
         List<Department> workerDepartments = new ArrayList<>();
         List<HourContract> workerHourContract = new ArrayList<>();
         List<Worker> workers = new ArrayList<>();
-        String dataString = "20/08/2018";
+
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate date = LocalDate.parse(dataString, dtf);
 
-        Department department = new Department("Engenharia de Software");
-        HourContract hourContractEmployee = new HourContract(date, 50.00, 20);
-        Worker employee = new Worker("Alex", WorkerLevel.MID_LEVEL, 1200.00);
+        System.out.println("Enter department's name: ");
+        String departmentName = sc.nextLine();
 
-        System.out.println("Dados do departamento: " + department);
-        System.out.println("Dados de horas de contrato: " + hourContractEmployee);
-        System.out.println("Dados do Trabalhador: " + employee);
+        System.out.println("Name: ");
+        String name = sc.nextLine();
 
+        System.out.println("Level: ");
+        String level = sc.nextLine().toUpperCase();
+
+        System.out.println("Base Salary: ");
+        double baseSalary = sc.nextDouble();
+
+        System.out.println("How many contracts to this worker? ");
+        int qtdContracts = sc.nextInt();
+        sc.nextLine();
+
+        // Instanciando as classes para objetos e adicionando os objetos nas listas.
+        Department department = new Department(departmentName);
+        workerDepartments.add(department);
+
+        Worker employee = new Worker(name, WorkerLevel.valueOf(level), baseSalary);
+        workers.add(employee);
+
+        for(int i = 0; i < qtdContracts; i++) {
+            System.out.printf("Enter contract #%d data: ", i + 1);
+
+            System.out.println("\nDate (DD/MM/YYYY): ");
+            String dataString = sc.nextLine();
+            LocalDate data_convertida = LocalDate.parse(dataString, dtf);
+
+            System.out.println("Value per hour: ");
+            double valuePerHour = sc.nextDouble();
+
+            System.out.println("Duration (hours): ");
+            int  durationHours = sc.nextInt();
+            sc.nextLine();
+
+            HourContract hourContractEmployee = new HourContract(data_convertida, valuePerHour, durationHours);
+            workerHourContract.add(hourContractEmployee);
+        }
+
+        // System.out.println("Dados do departamento: " + workerDepartments);
+        // System.out.println("Dados de horas de contrato: " + workerHourContract);
+        // System.out.println("Dados do Trabalhador: " + workers);
     }
 }
