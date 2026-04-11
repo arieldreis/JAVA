@@ -7,10 +7,7 @@ import enumeracao_composicao.exercicios.order.entities.orderStatus;
 import enumeracao_composicao.exercicios.order.entities.product;
 
 import java.time.LocalDateTime;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -22,7 +19,7 @@ public class orderProgram {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-        System.out.println("Enter client data: ");
+        System.out.println("Enter client data:");
         System.out.println("Name: ");
         String name = sc.nextLine();
 
@@ -39,18 +36,18 @@ public class orderProgram {
 
         // Pegar a hora atual do sistema com o LocalDateTime
         LocalDateTime now_time = LocalDateTime.now();
-        LocalDateTime order_time_formatter = LocalDateTime.parse(order_status, dtf2);
+        String order_time_formatter = now_time.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
 
         // Instanciando o objeto do cliente
-        client client = new client(name, email, birthday_formatter);
-        order pedido = new order(order_time_formatter, os);
+        client cliente = new client(name, email, birthday_formatter);
+        order pedido = new order(new Date(), os, cliente);
 
         System.out.println("How many items to this order? ");
         int qtd = sc.nextInt();
         sc.nextLine();
 
         for (int i = 0; i < qtd; i++) {
-            System.out.printf("Order #%d: ", i + 1);
+            System.out.printf("Order #%d:\n", i + 1);
 
             System.out.println("Product name: ");
             String product_name = sc.nextLine();
@@ -58,11 +55,24 @@ public class orderProgram {
             System.out.println("Product price: ");
             double product_price = sc.nextDouble();
 
+            product product = new product(product_name, product_price);
+
             System.out.println("Quantity: ");
             int quantity = sc.nextInt();
 
+            orderItem item_req = new orderItem(quantity, product_price, product);
+            pedido.addItem(item_req);
+
             sc.nextLine();
         }
+
+        System.out.println("ORDER SUMMARY: ");
+        System.out.println("Order moment: " + pedido.getMoment());
+        System.out.println("Order status: " + pedido.getStatus());
+        System.out.println("Cliente: " + cliente.getName() + " (" + cliente.getBirthDate() + ")" + " - " +  cliente.getEmail());
+        System.out.println("Order Items: ");
+        System.out.println(pedido.toString());
+        System.out.println("Total price: " + pedido.total());
 
     }
 }

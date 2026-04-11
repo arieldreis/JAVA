@@ -1,25 +1,31 @@
 package enumeracao_composicao.exercicios.order.entities;
 import enumeracao_composicao.exercicios.order.entities.orderItem;
+import enumeracao_composicao.exercicios.order.entities.orderStatus;
 
-import java.time.LocalDateTime;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
 public class order {
-    private LocalDateTime moment;
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    private Date moment;
     private orderStatus status;
+    private client cliente;
+    List<orderItem> statusPedidos = new ArrayList<>();
 
-    public order(LocalDateTime moment, orderStatus status){
+    // Contructor
+    public order(Date moment, orderStatus status, client cliente){
         this.moment = moment;
         this.status = status;
+        this.cliente = cliente;
     }
-    List<orderItem> statusPedido = new ArrayList<>();
 
     // Getters and Setters
-    public LocalDateTime getMoment() {
+    public Date getMoment() {
         return moment;
     }
-    public void setMoment(LocalDateTime moment) {
+    public void setMoment(Date moment) {
         this.moment = moment;
     }
     public orderStatus getStatus(){
@@ -29,14 +35,22 @@ public class order {
         this.status = status;
     }
     public List<orderItem> getStatusPedido() {
-        return statusPedido;
+        return statusPedidos;
     }
 
     // Methods
     public void addItem(orderItem item){
-        statusPedido.add(item);
+        statusPedidos.add(item);
     }
     public void removeItem(orderItem item){
-        statusPedido.remove(item);
+        statusPedidos.remove(item);
+    }
+
+    public Double total(){
+        double total = 0;
+        for(orderItem statusPedido : statusPedidos){
+            total += statusPedido.subTotal();
+        }
+        return total;
     }
 }
